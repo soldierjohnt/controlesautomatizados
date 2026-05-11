@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contactenos</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<![endif]-->
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<!--/ nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<!--/misc. scripts-->
+
+<!--form validation & submit-->
+<link rel="stylesheet" href="scripts/form-validation/validationEngine.jquery.css" type="text/css"/>
+<script src="scripts/form-validation/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/form-validation/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		// binds form submission and fields to the validation engine
+		var frm = $("#contact_form");
+		var msgdiv = $("#message_box_place_holder");
+		frm.validationEngine({promptPosition:'topRight'});
+		
+		$("#btnReset").click(function(){
+			frm[0].reset();
+			return false;
+		});
+		
+		$("#btnSubmit").click(function(){
+			$(".message-box").remove();
+			
+			if(frm.validationEngine('validate')){
+				$(this).fadeOut('fast');
+				$.ajax({
+					type: 'POST',
+					url: 'xml/contact.php',
+					data: frm.serialize(),
+					success: function(result) {
+						if(result=="1")
+						{
+							inlineMsgBox(msgdiv,'information','Thank you. We have received your mail.',617);
+							frm[0].reset();
+						}else{					
+							inlineMsgBox(msgdiv,'error','Error : ' + result,617);
+						}
+						$("#btnSubmit").fadeIn('fast');
+					}
+				});
+			}
+			
+			return false;
+		});
+	});
+</script>			
+<!--/form validation & submit-->
+
+</head>
+
+<!--body-->
+<body>
+	<!--sliding login panel-->
+	<div id="login_panel">
+    	
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+    	</div>
+    </div>    
+    <!--/sliding login panel-->
+
+	<!--top anchor-->
+    <a name="top"></a>
+    
+    <!--body wrapper-->
+    <div id="body-wrapper">
+    
+    	<div id="page-header-wrapper">
+    
+            <!--header container-->
+            <div id="header-contanier">    
+            
+                <!--header wrapper-->
+                <div id="header" class="center-clear">   
+                         
+                    <!--logo-->
+                    <div id="logo">
+                        <!--logo here-->
+                    </div>
+                    <!-- /logo-->
+                        <!--banner 468x60-->
+                <div id="banner_468x60">
+                    <img src="images/telefono.png" alt="banner-468x60" width="300" height="75" align="right" />
+                    
+                </div>
+                <!-- /banner 468x60-->        
+                    <!--header place holder-->
+                    <div class="header-place-holder"></div>
+                    
+                    <!--social tabs--><!-- /social tabs-->
+                    
+                    <!--menu-->
+                     <ul id="top_menu" class="sf-menu">
+                    <li><a href="index-2.html">Inicio</a><span>NOSOTROS</span></li>
+                    <li><a href="all_elements.html">Lineas</a><span>SECTORES</span>
+                        <!--first level dropdown menu-->                      
+                               
+                    </li>
+                    <li><a href="about.html">Servicios</a><span>NUESTROS SERVICIOS</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="about.html">NUESTROS SERVICIOS</a></li>
+                              <li><a href="tableros.html">TABLEROS</a></li>
+                             <li><a href="#">INSTALACIONES ELECTRICAS</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="industriales.html">INDUSTRIALES</a></li>            
+                                    <li><a href="domiciliarias.html">DOMICILIARIAS</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="motores.html">MOTORES</a></li>
+                             <li><a href="piscinas.html">PISCINAS</a></li>
+                             <li><a href="piletas.html">PILETAS</a></li>
+                             <li><a href="automatizacion.html">AUTOMATIZACION</a></li>                                 
+                             <li><a href="hidroneumatico.html">SISTEMA HIDRONEUTICO</a></li>
+                             <li><a href="contraincendio.html">CONTRA INCENDIO</a></li>
+                             <li><a href="about.html">RIEGO TECNIFICADO</a></li>
+                             <li><a href="about.html">SERVICIO TECNICO</a></li>                                 
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="project-details.html">Galería</a><span>VISITENOS</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            
+						  <li><a href="project-details.html">Galería</a></li>                            
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="blog.html">Productos</a><span>NUESTROS PROYECTOS</span>
+                        <!--first level dropdown menu-->
+                        
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Contactenos</a><span>CONTACTENOS!</span></li>           
+                </ul>
+                    <!-- /menu-->
+                    
+                    <!--search box-->
+                    
+                    <!-- /search box-->
+                    
+                </div>
+                <!-- /header wrapper-->
+                
+            </div>
+            <!-- /header container-->
+
+	        <div class="clear40"></div>
+                       
+            <!--bread crumb-->
+            <div class="center-clear">
+                <div id="breadcrumb" class="page-columns-head-style gray-frame">
+                    <ul>
+                        <li><a href="index-2.html">Inicio</a></li>
+                        <li><a href="contact.html" class="active">Contactenos</a></li>
+                    </ul>
+                </div>
+			</div>                
+            <!--/bread crumb-->
+            
+        </div>
+        <!--/page header wrapper-->
+        
+        
+        <!--page content wrapper-->
+        <div id="page-content-wrapper">        
+        
+            <!--content container-->
+            <div class="center-clear page-content-wrapper">
+                
+                <div class="page-content gray-frame alignleft_block full-content-width">
+                    <!--inner title-->
+                    <h1 class="heading h1">Contactenos</h1>
+                    <!--/inner title-->
+                    
+					<div class="clear"></div>
+                    
+                    <!--left block-->
+                    <div class="alignleft_block margin-right-20 width-310">
+                    	<!--address-->
+                      <h3 class="heading h3"><strong>Telefonos: </strong></h3> 
+                      <p></p>
+                      <h1 class="heading h1">WhastApp: 931 - 623111  </h1> 
+                       
+                       <h1 class="heading h1">TELF:  931 - 623111   </h1>
+                      <h1 class="heading h1"> <h1 class="heading h1">&nbsp;</h1>
+                      Correo: hidropc@gmail.com</h1>
+                      <h1 class="heading h1">&nbsp; </h1>                                      
+   </h1> 
+                        
+                    <h3 class="heading h3"><strong>ESPECIALIDAD: </strong></h3> 
+                        <p></p>
+                        
+                   <h4 class="heading h4"> <h4 class="heading h4"> <strong> ELECTRICIDAD - ELECTRONICA</strong></h4>  
+                   <p></p> 
+                   
+                   <h4 class="heading h4"> <h4 class="heading h4"> <strong> HIDRAULICA - ELECTRONICA INDUSTRIAL</strong></h4>  
+                   <p></p>   
+                        
+                        
+                        <p>Si está realizando un proyecto o ejecutando alguna obra, No dude en comunicarse con nosotros o enviarnos a nuestro correo hidropc@gmail.com para atenderlos en sus requerimientos con una propuesta técnico-económica competitiva y un trato personalizado.</p>
+                        <!--address-->
+                        
+                      <div class="clear50"></div>
+
+						<!--contact a person-->
+                        <p class="bold_only">&nbsp;</p>
+                        <!--contact a person-->
+                  </div>
+                    <!--/left block-->
+                    
+                    <!--right block-->
+                    <div class="alignleft_block">
+                    	
+                        <!--google maps-->
+                        <p class="bold_only">Mapa</p>
+                        <iframe src="https://www.google.com/maps"></iframe>
+                        <!--/google maps-->
+                    
+                    	<div class="clear10"></div>
+                    	<div class="hr-two"></div>
+                    <!--post new comment-->
+                    	<p class="bold_only"><span class="heading h1">COMENTARIOS A NUESTRO CORREOS hidropc@gmail.com</span></p>
+                        
+                        <form name="frmContacto" method="post" action="sendbymail.php">
+                      </form>
+                    </div>
+                    
+		            <div class="clear20"></div>                    
+                </div>
+                       
+                <!--/right block-->
+                
+            </div>
+            <!-- /content container-->
+    	
+            <div class="clear40"></div>
+
+        </div>
+        <!--/page content wrapper-->
+<!-- /three box -->
+            
+            <div class="clear20"></div>        
+            
+            <!-- three box footer-->      
+            <div class="box-three-sub-wrapper transparent-background"> 
+                <div class="box-three featured-box-sub nomargin">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                            <h3>NOSOTROS</h3>
+                            <div class="clear"></div> 
+                            <!-- text-->
+                            <span>
+                                No dude en comunicarse con nosotros o enviarnos a nuestro correo hidropc@gmail.com para atenderlos en sus requerimientos con una propuesta técnico-económica competitiva y un trato personalizado.
+
+
+                            </span>
+                            <span>
+                                Somos  una empresa dedicada a la Comercialización y distribución de tableros y equipos eléctricos, electrónicos,  en baja y media tensión para aplicaciones para el sector industrial, empresas y edificaciones. 
+							</span>
+                            
+                        </div>
+                    </div>        
+                </div>
+                <div class="box-three featured-box-sub">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                            <h3>SOMOS ESPECIALISTAS</h3>
+                            <div class="clearfix"></div> 
+                            <!-- list with image -->
+                          <ul>
+                                <li>
+                                    <img src="images/temp/bullet_list1.jpg" alt="" width="55" height="55" />
+                                    <span><a href="#">ESPECIALISTA EN SISTEMAS AUTOMATIZACION</a></span>
+                                    <span class="times-gray-italic-13">TABLEROS</span>
+                              </li>
+                                <li>
+                                    <img src="images/temp/bullet_list2.jpg" alt="" width="55" height="55" />
+                                    <span><a href="#">SISTEMA CONTRA INCENDIO</a></span>
+                                    <span class="times-gray-italic-13">SERVICIO TECNICO</span>
+                                </li>                            
+                          </ul>
+                            <!-- /list with image -->
+                        </div>
+                    </div>       
+                </div>
+                <div class="box-three featured-box-sub">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                           <span> <h3>CONTACTENOS</h3>
+                           <h3> WhastApp:  931 - 623111</h3> <h3>TELF:  931 - 623111</h3> <h3>Correo: hidropc@gmail.com </h3>   <h3>San Isidro - Peru </h3></span>
+                        <div class="clear"></div> 
+                            <!-- text-->
+                            <span>
+                                <!--<p> for ie 7 fix. works well with others too-->
+                              
+                        </div>
+                    </div>        
+                </div>       
+            </div>             
+            <!-- /three box footer-->        
+        </div>
+        <!-- /content container-->
+    
+        <div class="clear20"></div>
+
+        <!--footer-->
+        <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#">Lineas</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contactenos</a></li>
+                </ul>
+                <div><strong>WhastApp:  931 - 623111 / T:   931 - 623111   /Correo: hidropc@gmail.com     /San Isidro - Peru</strong></div>
+            </div>
+        </div>
+        <!-- /footer-->
+    
+    </div>
+    <!--/body wrapper-->    
+</body>
+<!-- /body -->
+
+</html>

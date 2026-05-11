@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>galeria</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<![endif]-->
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<!--/ nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<!--/misc. scripts-->
+
+<!--colorbox-->
+<script type="text/javascript" src="scripts/colorbox/colorbox/jquery.colorbox-min.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/colorbox/example1/colorbox.css"/>
+<!--/colorbox-->
+
+<script type="text/javascript">
+
+$(document).ready(function(e) {
+	$('#slider').nivoSlider({ effect: 'random',useTransparentBg:false });	
+	
+	$("#nivo_slider_previous").click(function(){$(".nivo-directionNav .nivo-prevNav").click();return false;})
+	$("#nivo_slider_next").click(function(){$(".nivo-directionNav .nivo-nextNav").click();return false;})
+	
+	$("#slider4").horizontalSlider({nextBtn:$("#projects_slider_next"),previousBtn:$("#projects_slider_previous"),slidingDiv:".sliding-div"});
+	
+});
+</script>
+
+<!--nivor slider theme-->
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/themes/project-details/big.css"/>
+<!--/nivo slider theme-->
+
+</head>
+
+<!--body-->
+<body>
+	<!--sliding login panel-->
+	<div id="login_panel">
+    	<div id="content">
+        	<div>
+				<div class="column column1">
+	            	<!--help text, maybe-->
+                    <h3>And now some Lorem Ipsum to fill the content</h3>
+                    <p>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent scelerisque commodo massa. Ut volutpat. Maecenas luctus augue quis velit.
+                    </p>
+                    <p>
+	                    Ut volutpat. Maecenas luctus augue quis velit. Lorem ipsum dolor sit amet, adipiscing elit. Scelerisque commodo massa. 
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Not a member yet? Sign Up</a>
+                    </p>
+	            	<!--/help text, maybe-->
+                </div>
+        	</div>
+        </div>
+    	<div id="signin_register">
+            
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+    	</div>
+    </div>    
+    <!--/sliding login panel-->
+
+	<!--top anchor-->
+    <a name="top"></a>
+    
+    <!--body wrapper-->
+    <div id="body-wrapper">
+    
+    	<div id="page-header-wrapper">
+    
+            <!--header container-->
+            <div id="header-contanier">    
+            
+                <!--header wrapper-->
+                <div id="header" class="center-clear">   
+                         
+                    <!--logo-->
+                    <div id="logo">
+                        <!--logo here-->
+                    </div>
+                    <!-- /logo-->
+                    <!--banner 468x60-->
+                <div id="banner_468x60">
+                    <img src="images/telefono.png" alt="banner-468x60" width="300" height="75" align="right" />
+                    
+                </div>
+                <!-- /banner 468x60-->
+                                
+                    <!--header place holder-->
+                    <div class="header-place-holder"></div>
+                    
+                    <!--social tabs--><!-- /social tabs-->
+                    
+                    <!--menu-->
+                    <ul id="top_menu" class="sf-menu">
+                    <li><a href="index-2.html">Inicio</a><span>NOSOTROS</span></li>
+                    <li><a href="all_elements.html">Lineas</a><span>SECTORES</span>
+                        <!--first level dropdown menu-->                      
+                               
+                    </li>
+                    <li><a href="about.html">Servicios</a><span>NUESTROS SERVICIOS</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="about.html">NUESTROS SERVICIOS</a></li>
+                              <li><a href="tableros.html">TABLEROS</a></li>
+                             <li><a href="#">INSTALACIONES ELECTRICAS</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="industriales.html">INDUSTRIALES</a></li>            
+                                    <li><a href="domiciliarias.html">DOMICILIARIAS</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="motores.html">MOTORES</a></li>
+                             <li><a href="piscinas.html">PISCINAS</a></li>
+                             <li><a href="piletas.html">PILETAS</a></li>
+                             <li><a href="automatizacion.html">AUTOMATIZACION</a></li>                                 
+                             <li><a href="hidroneumatico.html">SISTEMA HIDRONEUTICO</a></li>
+                             <li><a href="contraincendio.html">CONTRA INCENDIO</a></li>
+                             <li><a href="about.html">RIEGO TECNIFICADO</a></li>
+                             <li><a href="about.html">SERVICIO TECNICO</a></li>                                 
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="project-details.html">Galería</a><span>VISITENOS</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            
+						  <li><a href="project-details.html">Galería</a></li>                            
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="blog.html">Productos</a><span>NUESTROS PROYECTOS</span>
+                        <!--first level dropdown menu-->
+                        
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Contactenos</a><span>CONTACTENOS!</span></li>           
+                </ul>
+                    <!-- /menu-->
+                    
+                    <!--search box-->
+                    
+                    <!-- /search box-->
+                    
+                </div>
+                <!-- /header wrapper-->
+                
+            </div>
+            <!-- /header container-->
+
+	        <div class="clear40"></div>
+                  
+            
+            <!--bread crumb-->
+            <div class="center-clear">
+                <div id="breadcrumb" class="page-columns-head-style gray-frame">
+                    <ul>
+                        <li><a href="index-2.html">Inicio</a></li>
+                        <li><a href="portfolio_1column.html">Galería</a></li>                        
+                        <li><a href="project-details.html" class="active">Galería</a> flash</li>
+                    </ul>
+                </div>
+			</div>                
+            <!--/bread crumb-->
+            
+        </div>
+        <!--/page header wrapper-->
+        
+        
+        <!--page content wrapper-->
+        <div id="page-content-wrapper">        
+        
+            <!--content container-->
+            <div class="center-clear page-content-wrapper">
+                
+                <div class="page-content gray-frame alignleft_block full-content-width">
+                    <!--inner title-->
+                    <h1 class="heading h1">Portfolio</h1>
+                    <!--/inner title-->
+                    
+					<div class="clear"></div>                    
+                    
+					<!--block-->
+                    <div class="project-details full-content-width alignleft_block">
+                        <div class="alignleft_block margin-right-20 left_part">
+                          <div class="clear10"></div>
+							<div class="clear40"></div>
+                            
+                            <!--related projects-->
+                      
+							<div class="related-projects-slider alignleft_block" id="slider4">
+                            
+                                <div class="alignleft_block margin_bottom10">
+                                    <div>
+	                                    <span class="bold_only">Vea También</span>
+                                        <div class="alignright_block sliding-div-navigation">
+                                            <a href="#" id="projects_slider_previous" class="slider-arrows slider-previous">Previous</a>
+                                            <a href="#" id="projects_slider_next" class="slider-arrows slider-next">Next</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            	<div class="sliding-div">
+                                	<!--slide-->
+                                    <div>
+                                        <a href="portfolio_4column_gallery.html" title="Project 1" class="alignright_block"><img src="images/temp/4gallery/07.jpg" width="210" height="148" class="gray-frame padding-5"/></a>
+                                        <!--title-->
+                                        <h3 class="heading h3">Venta de Accesorios</h3>
+                                        <!--/title-->
+                                        <p>
+                                            Somos  una empresa dedicada a la Comercialización y distribución de tableros y equipos eléctricos, electrónicos,  en baja y media tensión para aplicaciones para el sector industrial, empresas y edificaciones. 
+
+Comercializamos nuestros productos a nivel nacional, lo cual garantiza tableros eléctricos de gran calidad, siempre respaldados por la capacidad de nuestros técnicos e ingenieros.                                       
+                                        </p>
+                                    </div>
+                                	<!--/slide-->                                    
+                                    
+                                	<!--slide-->
+                                    <div>
+                                        <a href="portfolio_4column_gallery.html" title="Project 2" class="alignright_block"><img src="images/temp/4gallery/01.jpg" width="210" height="148" class="gray-frame padding-5"/></a>
+    
+                                        <!--title-->
+                                        <h3 class="heading h3">Construcción, Equipamiento, Instalación, Mantenimiento de Piscinas - Piletas</h3>
+                                        <!--/title-->
+                                        <p>
+                                            Brindamos asesoría desde el inicio de la construcción con diseños de planos de piscina e instalaciones de tuberías y acabados, además brindamos un servicio de mantenimiento integral para las instalaciones. Nuestro principal objetivó es dar un servicio de calidad que se ajuste a las necesidades específicas que tienen nuestros clientes. 
+ 
+Contamos con un equipo de profesionales altamente calificados y con muchos años de experiencia en el sector, para asegurar unas óptimas condiciones de la instalación durante todo el año.
+                                      
+                                        </p>
+                                    </div>
+                                	<!--/slide-->
+
+                                	<!--slide-->                               
+                                    <div>
+                                        <a href="portfolio_4column_gallery.html" title="Project 3" class="alignright_block"><img src="images/temp/4gallery/02.jpg" width="210" height="148" class="gray-frame padding-5"/></a>
+                                        <!--title-->
+                                        <h3 class="heading h3">CONTRA INCENDIO</h3>
+                                        <!--/title-->
+                                        <p>
+                                            Mantenimiento Preventivo y Correctivo de Electrobombas, Bombas, Motores. 
+                                      
+                                        </p>
+                                    </div> 
+                                	<!--/slide-->
+
+								</div>                                                                   
+                            </div>
+
+                            <!--/related projects-->
+                                                      
+                      </div>
+                        
+                        <div class="alignleft_block right_part">
+                            <!--title-->
+                            <h3 class="heading h3">GALERIA 1 FLASH</h3>
+                            <!--/title-->
+                            <div class="clear10"></div>
+                            <!--content-->
+                            <p>
+                            <strong> Vea Nuestra Galería</strong> </p>
+
+
+                            <div class="gray-frame padding-5 padding-bottom-30">
+                                <div id="slider" class="project-big-slider ">
+                                    <img src="images/temp/1gallery/01.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/02.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/03.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/04.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/05.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/06.jpg" width="688" height="548"/>
+                       <img src="images/temp/1gallery/07.jpg" width="688" height="548"/>
+                       <img src="images/temp/1gallery/08.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/09.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/10.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/11.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/12.jpg" width="688" height="548"/>  
+<img src="images/temp/1gallery/13.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/14.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/15.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/16.jpg" width="688" height="548"/>
+                                    <img src="images/temp/1gallery/17.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/18.jpg" width="688" height="548"/>
+                       <img src="images/temp/1gallery/19.jpg" width="688" height="548"/>
+                       <img src="images/temp/1gallery/20.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/21.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/22.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/23.jpg" width="688" height="548"/>
+                        <img src="images/temp/1gallery/24.jpg" width="688" height="548"/>  
+
+                                </div>
+    
+                                <div class="alignright_block margin-top-5">
+                                    <a href="#" id="nivo_slider_previous" class="slider-arrows slider-previous">Previous</a>
+                                    <a href="#" id="nivo_slider_next" class="slider-arrows slider-next">Next</a>                            
+                                </div>
+                            </div>
+                            
+                          <div class="clear10"></div>
+<div class="clear"></div>
+                            
+                            <div class="hr"></div>
+                            
+                            <!--/content-->
+                                                        
+                            <!--view link-->
+                                                                                   
+                            <!--/view link-->
+
+                          	<div class="clear10"></div>              
+                                                        
+                            <!-- AddThis Button BEGIN -->
+        
+                            <!-- AddThis Button END -->                            
+                            
+                          	<div class="clear20"></div>              
+                          
+                          	<!--project comments-->
+                            <div class="gray-frame post-sub-links"></div>
+                            <!--exists comments--><!--/exists comments--><!--post new comment-->
+                          <h1 class="heading h1"> COMENTARIOS A NUESTRO CORREOS hidropc@gmail.com</h1>
+
+                          <!--/post new comment-->       
+                                                 
+                          	<!--/project comments-->
+                            
+                        </div>
+                    </div>
+                    <!--/block-->
+
+                </div>
+                
+            </div>
+            <!-- /content container-->
+    	
+            <div class="clear40"></div>
+
+        </div>
+        <!--/page content wrapper-->
+<!-- /three box -->
+            
+            <div class="clear20"></div>        
+            
+            <!-- three box footer-->      
+            <div class="box-three-sub-wrapper transparent-background"> 
+                <div class="box-three featured-box-sub nomargin">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                            <h3>NOSOTROS</h3>
+                            <div class="clear"></div> 
+                            <!-- text-->
+                            <span>
+                                No dude en comunicarse con nosotros o enviarnos a nuestro correo hidropc@gmail.com para atenderlos en sus requerimientos con una propuesta técnico-económica competitiva y un trato personalizado.
+
+
+                            </span>
+                            <span>
+                                Somos  una empresa dedicada a la Comercialización y distribución de tableros y equipos eléctricos, electrónicos,  en baja y media tensión para aplicaciones para el sector industrial, empresas y edificaciones. 
+							</span>
+                            
+                        </div>
+                    </div>        
+                </div>
+                <div class="box-three featured-box-sub">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                            <h3>SOMOS ESPECIALISTAS</h3>
+                            <div class="clearfix"></div> 
+                            <!-- list with image -->
+                          <ul>
+                                <li>
+                                    <img src="images/temp/bullet_list1.jpg" alt="" width="55" height="55" />
+                                    <span><a href="#">ESPECIALISTA EN SISTEMAS AUTOMATIZACION</a></span>
+                                    <span class="times-gray-italic-13">TABLEROS</span>
+                              </li>
+                                <li>
+                                    <img src="images/temp/bullet_list2.jpg" alt="" width="55" height="55" />
+                                    <span><a href="#">SISTEMA CONTRA INCENDIO</a></span>
+                                    <span class="times-gray-italic-13">SERVICIO TECNICO</span>
+                                </li>                            
+                          </ul>
+                            <!-- /list with image -->
+                        </div>
+                    </div>       
+                </div>
+                <div class="box-three featured-box-sub">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                           <span> <h3>CONTACTENOS</h3>
+                           <h3> WhastApp: 931 - 623111 </h3> <h3> TELF: 931 - 623111</h3> <h3>Correo: hidropc@gmail.com </h3>   <h3>San Isidro - Peru </h3></span>
+                        <div class="clear"></div> 
+                            <!-- text-->
+                            <span>
+                                <!--<p> for ie 7 fix. works well with others too-->
+                              
+                        </div>
+                    </div>        
+                </div>       
+            </div>             
+            <!-- /three box footer-->        
+        </div>
+        <!-- /content container-->
+    
+        <div class="clear20"></div>
+
+		<!--footer-->
+        <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#">Lineas</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contactenos</a></li>
+                </ul>
+                <div><strong>WhastApp: 931 - 623111 / TELF: 931 - 623111   /Correo: hidropc@gmail.com     /San Isidro - Peru</strong></div>
+            </div>
+            </div>
+        </div>
+        <!-- /footer-->
+    
+    </div>
+    <!--/body wrapper-->    
+</body>
+<!-- /body -->
+
+</html>
